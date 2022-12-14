@@ -20,7 +20,7 @@ public class BlogController {
         this.postRepository = postRepository;
     }
 
-    @RequestMapping("post/{id}")
+    @RequestMapping("/post/{id}")
     public String postDetails(@PathVariable Long id, ModelMap modelMap) {
         Post blogId = postRepository.findById(id);
         modelMap.put("post", blogId);
